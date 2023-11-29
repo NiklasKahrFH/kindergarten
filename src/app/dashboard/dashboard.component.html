@@ -1,0 +1,6 @@
+<!-- <app-data [currentPage]="currentPage" (selectPageEvent)="receiveMessage($event)"></app-data> -->
+<app-data [(currentPage)]="currentPage" (currentPageChange)="handlePageChange($event)"></app-data>
+
+
+<br>
+<app-add-data [currentPage]="currentPage"></app-add-data>

@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: whitesmoke;
+    background-image: radial-gradient(circle, #F2DFCC 1px, transparent 1px);
+    background-size: 7.14vw 7.14vw;
+    margin: 0 12vw;
+}
+
+app-root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Importing Bootstrap SCSS file. */
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";

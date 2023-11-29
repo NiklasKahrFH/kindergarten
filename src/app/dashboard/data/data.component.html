@@ -1,0 +1,26 @@
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Kindergarden</th>
+        <th>Adresse</th>
+        <th>Alter</th>
+        <th>Geburtsdatum</th>
+        <th></th>
+    </tr>
+    <tr *ngFor="let child of storeService.children">
+        <td>{{child.name}}</td>
+        <td>{{child.kindergarden.name}}</td>
+        <td>{{child.kindergarden.address}}</td>
+        <td>{{getAge(child.birthDate)}}</td>
+        <td>{{child.birthDate | date:'longDate'}}</td>
+        <button mat-button color="warn" (click)="cancelRegistration(child.id)">Kind abmelden</button>
+    </tr>
+</table>
+<div>
+    <button mat-flat-button color="primary" [ngClass]="page == currentPage ? 'active' : ''" (click)="selectPage(page)"
+        type="button" *ngFor="let page of returnAllPages() | pagination ">{{page}}</button>
+</div>
+
+<mat-paginator [length]="returnAllPages()" [pageSize]="itemsPerPage" [pageSizeOptions]="[5, 10]"
+    (page)="changePage($event)">
+</mat-paginator>

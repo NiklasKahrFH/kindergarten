@@ -1,0 +1,36 @@
+<form [formGroup]="addChildForm" (ngSubmit)="onSubmit()" class="example-form">
+    <div *ngIf="showSuccessAlert" class="alert alert-success alert-dismissible fade show" role="alert">
+        Anmeldung erfolgreich!
+    </div>
+    <h2>Ihr Kind anmelden!</h2>
+    <mat-form-field class="example-full-width">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Max Mustermann" type="input" formControlName="name">
+        <mat-error *ngIf="addChildForm.controls.name.errors?.required">Name ist notwendig</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Geburtsdatum</mat-label>
+        <input placeholder="09.06.2019" matInput formControlName="birthDate" [matDatepicker]="picker">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="addChildForm.controls.birthDate.errors?.required">Geburtstag ist notwendig</mat-error>
+        <mat-error *ngIf="addChildForm.controls.birthDate.errors?.futureDate">Das Geburtsdatum kann nicht in der
+            Zukunft
+            liegen
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Select</mat-label>
+        <mat-select formControlName="kindergardenId">
+            <mat-option *ngFor="let kindergarten of storeService.kindergardens" [value]="kindergarten.id">
+                {{ kindergarten.name }}, {{ kindergarten.address }}
+            </mat-option>
+        </mat-select>
+        <mat-error *ngIf="addChildForm.controls.kindergardenId.errors?.required">Kindergarten ist
+            notwendig</mat-error>
+    </mat-form-field>
+
+    <button mat-stroked-button color="primary" type="submit">Erfassen</button>
+</form>

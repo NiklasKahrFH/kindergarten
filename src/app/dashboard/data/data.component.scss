@@ -1,0 +1,27 @@
+table {
+
+    td,
+    th {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+div {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+
+    button {
+        margin: 0 1px;
+
+        .active {
+            background-color: #8668bb;
+        }
+    }
+}
+
+mat-paginator {
+    border-radius: 6px;
+    margin-top: 12px;
+}
