@@ -1,24 +1,6 @@
 {
   "childs": [
     {
-      "name": "Leonhard Poltter",
-      "kindergardenId": 1,
-      "birthDate": "2023-11-04T23:00:00.000Z",
-      "id": 1
-    },
-    {
-      "name": "Marianne Swén",
-      "kindergardenId": 3,
-      "birthDate": "2022-03-07T23:00:00.000Z",
-      "id": 2
-    },
-    {
-      "name": "Richard Gestern",
-      "kindergardenId": 5,
-      "birthDate": "2022-05-10T22:00:00.000Z",
-      "id": 3
-    },
-    {
       "name": "Lilia Bunterbus",
       "kindergardenId": 4,
       "birthDate": "2021-07-06T22:00:00.000Z",
@@ -29,6 +11,12 @@
       "kindergardenId": 3,
       "birthDate": "2023-06-03T22:00:00.000Z",
       "id": 6
+    },
+    {
+      "name": "Peter Musé",
+      "kindergardenId": 1,
+      "birthDate": "2023-12-02T23:00:00.000Z",
+      "id": 7
     }
   ],
   "kindergardens": [

@@ -1,26 +1,41 @@
-<table>
+<table #kindergardenList>
     <tr>
         <th>Name</th>
-        <th>Kindergarden</th>
-        <th>Adresse</th>
-        <th>Alter</th>
+        <th class="separation-lines">Kindergarten</th>
+        <th class="separation-lines">Adresse</th>
+        <th class="separation-lines">Alter</th>
         <th>Geburtsdatum</th>
-        <th></th>
+        <th>
+            <button [matMenuTriggerFor]="kindergartenFilter" mat-icon-button color="primary">
+                <mat-icon>filter_alt</mat-icon>
+            </button>
+            <mat-menu #kindergartenFilter="matMenu">
+                <div *ngFor="let kindergarten of childrensKindergartens">
+                    <button (click)="filter(kindergarten.name)"
+                        mat-menu-item>{{kindergarten.name}}<br>({{kindergarten.address}})</button>
+                </div>
+                <button (click)="resetFilter()" mat-stroked-button color="primary" class="alignment">Show All</button>
+            </mat-menu>
+
+        </th>
     </tr>
     <tr *ngFor="let child of storeService.children">
         <td>{{child.name}}</td>
-        <td>{{child.kindergarden.name}}</td>
-        <td>{{child.kindergarden.address}}</td>
-        <td>{{getAge(child.birthDate)}}</td>
+        <td class="separation-lines">{{child.kindergarden.name}}</td>
+        <td class="separation-lines">{{child.kindergarden.address}}</td>
+        <td class="separation-lines">{{getAge(child.birthDate)}}</td>
         <td>{{child.birthDate | date:'longDate'}}</td>
         <button mat-button color="warn" (click)="cancelRegistration(child.id)">Kind abmelden</button>
     </tr>
 </table>
-<div>
-    <button mat-flat-button color="primary" [ngClass]="page == currentPage ? 'active' : ''" (click)="selectPage(page)"
-        type="button" *ngFor="let page of returnAllPages() | pagination ">{{page}}</button>
-</div>
+<div class="flex">
+    <div>
+        <button class="paginator-buttons" mat-flat-button color="primary"
+            [ngClass]="page == currentPage ? 'active' : ''" (click)="selectPage(page)" type="button"
+            *ngFor="let page of returnAllPages() | pagination ">{{page}}</button>
+    </div>
 
-<mat-paginator [length]="returnAllPages()" [pageSize]="itemsPerPage" [pageSizeOptions]="[5, 10]"
-    (page)="changePage($event)">
-</mat-paginator>
+    <mat-paginator [length]="returnAllPages()" [pageSize]="itemsPerPage" [pageSizeOptions]="[5, 10]"
+        (page)="changePage($event)">
+    </mat-paginator>
+</div>

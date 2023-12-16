@@ -9,6 +9,7 @@ import { BackendService } from './shared/backend.service';
 })
 export class AppComponent implements OnInit {
   title = 'kindergardenApp';
+  isShown: boolean = true;
 
   constructor(private backendService: BackendService) {}
 
@@ -28,5 +29,16 @@ export class AppComponent implements OnInit {
     // }, 2000);
 
     // console.log(result);
+    setTimeout(() => {
+      this.isShown = false;
+    }, 1400);
+
+    }    
+  
+    public checkSpinner() {
+      if (!this.isShown) {
+        this.isShown = true;
+      }
+      this.ngOnInit();
     }
 }

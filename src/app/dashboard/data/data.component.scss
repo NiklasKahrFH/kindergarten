@@ -1,16 +1,36 @@
 table {
 
+    th {
+        padding-bottom: 4px;
+    }
+
     td,
     th {
         padding-left: 12px;
         padding-right: 12px;
+        border-bottom: 2px solid #e3dbfa;
+    }
+
+    tr:first-child {
+        th:last-child {
+            button {
+                height: 28px !important;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            display: flex;
+            justify-content: center;
+            border-bottom: 0;
+        }
     }
 }
 
 div {
     display: flex;
     flex-direction: row;
-    margin-top: 2rem;
 
     button {
         margin: 0 1px;
@@ -23,5 +43,25 @@ div {
 
 mat-paginator {
     border-radius: 6px;
-    margin-top: 12px;
+    margin-left: 1rem;
+}
+
+.separation-lines {
+    border-left: 2px solid #e3dbfa;
+    border-right: 2px solid #e3dbfa;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.paginator-buttons {
+    margin: 0 4px !important;
+}
+
+.alignment {
+    margin: 12px 32% 8px;
 }
