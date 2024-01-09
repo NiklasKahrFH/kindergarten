@@ -16,12 +16,12 @@ export class AddDataComponent implements OnInit {
     private formbuilder: FormBuilder,
     public storeService: StoreService,
     public backendService: BackendService,
-  ) {}
-  
+  ) { }
+
   public addChildForm: any;
   @Input() currentPage!: number;
   showSuccessAlert = false;
-  
+
   ngOnInit(): void {
     this.clearForm();
   }

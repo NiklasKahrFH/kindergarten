@@ -19,6 +19,7 @@ export class DataComponent implements OnInit {
   @Output() currentPageChange = new EventEmitter<number>();
   itemsPerPage = CHILDREN_PER_PAGE; // The default number of items per page
   childrensKindergartens: ChildrensKindergardens[] = [];
+  isShown: boolean = false;
 
   constructor(public storeService: StoreService, private backendService: BackendService) {
     this.currentPage = 0; // Set a default value
@@ -74,7 +75,13 @@ export class DataComponent implements OnInit {
   }
 
   public cancelRegistration(childId: string) {
+    if (!this.isShown) {
+      this.isShown = true;
+    }
     this.backendService.deleteChildData(childId, this.currentPage);
+    setTimeout(() => {
+      this.isShown = false;
+    }, 1800);
   }
 
   filter(kindergardenName: string) {

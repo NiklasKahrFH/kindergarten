@@ -1,0 +1,8 @@
+<div *ngFor="let kindergarten of storeService.kindergardens">
+    <div class="image-container">
+        <img [src]="kindergarten.img" alt="Foto {{ kindergarten.name }}">
+    </div>
+    <h2>{{kindergarten.name}}</h2>
+    <p><i>{{kindergarten.address}}</i></p>
+    <span>{{kindergarten.description}}</span>
+</div>

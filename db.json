@@ -13,12 +13,6 @@
       "id": 8
     },
     {
-      "name": "Max Brauni",
-      "kindergardenId": 5,
-      "birthDate": "2023-12-03T23:00:00.000Z",
-      "id": 9
-    },
-    {
       "name": "Berta Dilla",
       "kindergardenId": 4,
       "birthDate": "2023-12-01T23:00:00.000Z",
@@ -31,35 +25,45 @@
       "name": "Waldorfkindergarden im Zentrum Wiens",
       "address": "Oleandergasse 21, 1220 Wien",
       "betreiber": "MA 10 - Wiener Kindergärten",
-      "typ": 1
+      "typ": 1,
+      "img": "./assets/img/Walddorfkindergarten.jpg",
+      "description": "Der Waldorfkindergarten im 1220. Wiener Gemeindebezirk ist bekannt für seinen Schwerpunkt auf künstlerischen Aktivitäten und phantasievollem Spiel in einem charmanten Gebäude inmitten der Natur."
     },
     {
       "id": 2,
       "name": "Kindergarden der Karl Schubert Schule für seelenpflegebedürftige Kinder und Jugendliche in Wien",
       "address": "Kanitzgasse 1-3, 1230 Wien",
       "betreiber": "Verein Karl Schubertschule für Seelenpflege- bedürftige Kinder und Jugendliche in Wien",
-      "typ": 1
+      "typ": 1,
+      "img": "./assets/img/Kindergarden_der_Karl_Schubert_Schule.png",
+      "description": "Dieser Kindergarten ist für Kinder mit besonderen Bedürfnissen im 1230. Wiener Gemeindebezirk bestimmt und bietet als Teil der Karl-Schubert-Schulgemeinschaft maßgeschneiderte Unterstützung und ein liebevolles Umfeld."
     },
     {
       "id": 3,
       "name": "Kindergarden der Stadt Wien",
       "address": "Audorfgasse 20, 1210 Wien",
       "betreiber": "MA 10 - Wiener Kindergärten",
-      "typ": 2
+      "typ": 2,
+      "img": "./assets/img/Kindergarden_Wien_1210.jpg",
+      "description": "Als Teil der städtischen Kindergärten in Wien bietet diese Einrichtung im 1210. Bezirk ein modernes und integratives Bildungsumfeld mit dem Schwerpunkt auf sozialem Lernen und gesellschaftlichem Engagement."
     },
     {
       "id": 4,
       "name": "Kindergarden der Stadt Wien",
       "address": "Moßbachergasse 20-24, 1140 Wien",
       "betreiber": "MA 10 - Wiener Kindergärten",
-      "typ": 2
+      "typ": 2,
+      "img": "./assets/img/Kindergarden_Wien_1140.jpg",
+      "description": "Ein weiteres Juwel unter den öffentlichen Kindergärten in Wien, im Bezirk 1140 gelegen, wird für seine großzügigen Spielflächen im Freien und sein vielfältiges Freizeitprogramm geschätzt."
     },
     {
       "id": 5,
       "name": "Montessori Kinderhaus Wien 1",
       "address": "Nußdorferstraße 6, 1090 Wien",
       "betreiber": "Montessori Kinderhaus Wien",
-      "typ": 1
+      "typ": 1,
+      "img": "./assets/img/Montessori_Kinderhaus.jpg",
+      "description": "Das Montessori-Kinderhaus im 1090. Wiener Gemeindebezirk bietet einen kindzentrierten Lernansatz, der die Selbstständigkeit und Eigenaktivität in einer schön gestalteten Umgebung fördert."
     }
   ]
 }

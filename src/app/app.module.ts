@@ -24,6 +24,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatIconModule } from '@angular/material/icon';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { InfoComponent } from './info/info.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     HeaderComponent,
     PaginationPipe,
     AppButtonComponent,
-    LoadingSpinnerComponent
+    LoadingSpinnerComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,26 @@
+div {
+    padding-left: calc(12vw + 16px);
+    padding-right: calc(12vw + 16px);
+    margin-top: 3em;
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+
+}
+
+.image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    img {
+        width: 75%;
+        margin-bottom: 1.5em;
+    }
+}
+
+:last-child {
+    margin-bottom: 6em;
+}
